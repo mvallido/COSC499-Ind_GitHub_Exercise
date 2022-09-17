@@ -1,3 +1,5 @@
+# Inline comment for video
+
 def islandArea(graph) -> int:
     row, col = len(graph), len(graph[0])
     visited = set()
