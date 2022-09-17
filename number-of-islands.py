@@ -1,4 +1,4 @@
-def totalIslandArea(graph) -> int:
+def islandArea(graph) -> int:
     row, col = len(graph), len(graph[0])
     visited = set()
     largestIsland = 0
@@ -48,15 +48,25 @@ def init(graph) -> str:
           {graph}
           """)
     islandCount = numberOfIslands(graph)
-    largestIsland = totalIslandArea(graph)
+    largestIsland = islandArea(graph)
     
     print(f"""
           The total number of islands in the graph above is {islandCount}
           Largest island in the graph above has an area of {largestIsland}
           """)
 
-testCase1 = [[0, 1, 0, 1],[1, 1, 1, 1],[0, 1, 0, 1]]
-testCase2 = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0],[0,1,0,1,0,0,0,1,1,0,0,0,1]]
+testCase1 = [[0, 1, 0, 1],
+             [1, 1, 1, 1],
+             [0, 1, 0, 1]]
+testCase2 = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
+             [0,0,0,0,0,0,0,1,1,1,0,0,0],
+             [0,1,1,0,1,0,0,0,0,0,0,0,0],
+             [0,1,0,0,1,1,0,0,1,0,1,0,0],
+             [0,1,0,0,1,1,0,0,1,1,1,0,0],
+             [0,0,0,0,0,0,0,0,0,0,1,0,0],
+             [0,0,0,0,0,0,0,1,1,1,0,0,0],
+             [0,0,0,0,0,0,0,1,1,0,0,0,0],
+             [0,1,0,1,0,0,0,1,1,0,0,0,1]]
 
 init(testCase1)
 init(testCase2)
