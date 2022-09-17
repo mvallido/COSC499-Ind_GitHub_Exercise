@@ -1,3 +1,5 @@
+# Inline comment for video
+
 def islandArea(graph) -> int:
     row, col = len(graph), len(graph[0])
     visited = set()
@@ -58,6 +60,7 @@ def init(graph) -> str:
 testCase1 = [[0, 1, 0, 1],
              [1, 1, 1, 1],
              [0, 1, 0, 1]]
+
 testCase2 = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
              [0,0,0,0,0,0,0,1,1,1,0,0,0],
              [0,1,1,0,1,0,0,0,0,0,0,0,0],
