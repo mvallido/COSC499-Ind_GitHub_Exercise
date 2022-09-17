@@ -42,22 +42,21 @@ def numberOfIslands(graph) -> int:
     
     return count
 
-graph = [[0,0,1,0,0,0,0,1,0,0,0,0,0],
-         [0,0,0,0,0,0,0,1,1,1,0,0,0],
-         [0,1,1,0,1,0,0,0,0,0,0,0,0],
-         [0,1,0,0,1,1,0,0,1,0,1,0,0],
-         [0,1,0,0,1,1,0,0,1,1,1,0,0],
-         [0,0,0,0,0,0,0,0,0,0,1,0,0],
-         [0,0,0,0,0,0,0,1,1,1,0,0,0],
-         [0,0,0,0,0,0,0,1,1,0,0,0,0],
-         [0,1,0,1,0,0,0,1,1,0,0,0,1]]
-
 def init(graph) -> str:
+    print(f"""
+          Tested Graph:
+          {graph}
+          """)
     islandCount = numberOfIslands(graph)
     largestIsland = totalIslandArea(graph)
     
-    print(f"""The total number of islands in this graph is {islandCount}
-        and the largest island has an area of {largestIsland}
-        """)
+    print(f"""
+          The total number of islands in the graph above is {islandCount}
+          Largest island in the graph above has an area of {largestIsland}
+          """)
 
-init(graph)
+testCase1 = [[0, 1, 0, 1],[1, 1, 1, 1],[0, 1, 0, 1]]
+testCase2 = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0],[0,1,0,1,0,0,0,1,1,0,0,0,1]]
+
+init(testCase1)
+init(testCase2)
